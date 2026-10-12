@@ -1,160 +1,123 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <title>Ricky</title>
-
-  <meta name="author" content="Sheng-Chi Hsu">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-
+  <meta name="author" content="Sheng-Chi Hsu">
+  <meta name="description" content="Sheng-Chi Hsu (Ricky), research assistant at NYCU. Research in 3D reconstruction, neural rendering, and diffusion and flow models.">
+  <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <title>Sheng-Chi Hsu (Ricky)</title>
+  <style>
+    :root { color-scheme: light; --bg:#faf9f6; --ink:#252a2c; --muted:#656d73; --line:#dedfda; --accent:#355e79; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:4px; }
+    a:hover { color:#193e57; text-decoration:underline; }
+    .wrap { width:min(880px,calc(100% - 64px)); margin:auto; }
+    .skip { position:absolute; left:16px; top:-70px; background:white; padding:8px 16px; }
+    .skip:focus { top:12px; }
+    header { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:29px 0; border-bottom:1px solid var(--line); }
+    .wordmark { font-weight:650; letter-spacing:-.5px; color:var(--ink); text-decoration:none; }
+    nav { display:flex; gap:25px; font-size:14px; }
+    nav a { color:var(--muted); text-decoration:none; }
+    .intro { padding:70px 0 59px; max-width:730px; }
+    .eyebrow { color:var(--muted); font-size:11px; letter-spacing:1.7px; text-transform:uppercase; font-weight:650; }
+    h1 { font-size:42px; font-weight:650; line-height:1.2; letter-spacing:-1.6px; margin:13px 0 10px; }
+    .role { color:var(--muted); margin:0 0 25px; }
+    p { margin:0 0 16px; }
+    .interests { display:flex; flex-wrap:wrap; gap:8px 19px; margin:23px 0; color:var(--muted); font-size:14px; }
+    .interests span::before { content:""; display:inline-block; width:4px; height:4px; border-radius:50%; background:#899c9b; vertical-align:middle; margin-right:8px; }
+    .contacts { display:flex; flex-wrap:wrap; gap:24px; margin-top:26px; font-size:14px; font-weight:600; }
+    section { scroll-margin-top:24px; }
+    .section-heading { display:flex; align-items:baseline; justify-content:space-between; gap:20px; border-bottom:1px solid var(--line); padding-bottom:15px; }
+    h2 { font-size:23px; letter-spacing:-.6px; font-weight:600; margin:0; }
+    .section-heading span { font-size:12px; color:var(--muted); }
+    .paper { display:grid; grid-template-columns:208px minmax(0,1fr); gap:30px; padding:29px 0; border-bottom:1px solid var(--line); align-items:start; }
+    .visual { width:100%; height:auto; display:block; border-radius:5px; border:1px solid #dde2df; }
+    .venue { color:var(--accent); font-size:11px; letter-spacing:1px; font-weight:650; text-transform:uppercase; margin:0 0 7px; }
+    h3 { font-size:18px; line-height:1.45; letter-spacing:-.25px; font-weight:600; margin:0 0 10px; }
+    .authors { color:var(--muted); font-size:13px; margin-bottom:10px; }
+    .authors strong { color:var(--ink); font-weight:600; }
+    .abstract { font-size:14px; line-height:1.7; margin-bottom:12px; color:#51595f; }
+    #contact { margin-top:55px; padding:29px 0 35px; border-top:1px solid var(--line); }
+    #contact p { color:var(--muted); font-size:14px; margin:10px 0; }
+    footer { border-top:1px solid var(--line); padding:20px 0 30px; display:flex; justify-content:space-between; gap:20px; font-size:12px; color:var(--muted); }
+    footer a { color:inherit; }
+    @media(max-width:620px) {
+      .wrap { width:calc(100% - 40px); }
+      header { padding:20px 0; } nav { gap:16px; font-size:13px; }
+      .intro { padding:46px 0 40px; } h1 { font-size:36px; }
+      .paper { grid-template-columns:1fr; gap:20px; }
+      .paper .visual { max-width:360px; }
+      .section-heading span { font-size:11px; }
+      footer { flex-direction:column; gap:5px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; border-radius:2px; }
+    .paper-links { display:flex; flex-wrap:wrap; gap:20px; font-size:13px; }
+    .visual { background:#fff; }
+    #contact a { overflow-wrap:anywhere; }
+  </style>
 </head>
-
 <body>
-  <table
-    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr style="padding:0px">
-                <td style="padding:2.5%;width:63%;vertical-align:middle">
-                  <p class="name" style="text-align: center;">
-                    Sheng-Chi Hsu (Ricky)
-                  </p>
-                  <p>
-                    I'm Ricky, a master's student at National Tsing Hua University. I'm fascinated by how pixels are
-                    generated on screen and the algorithms and math behind them. I especially enjoy making real-time rendering
-                    and ray-tracing engines as a hobby. For research, I'm interested in:
-                  </p>
-                  <ul>
-                    <li>3D reconstruction</li>
-                    <li>Neural rendering</li>
-                    <li>Diffusion and flow models</li>
-                  </ul>
-                  <p style="text-align:center">
-                    <a href="mailto:ricky610626@gapp.nthu.edu.tw">Email</a> &nbsp;/&nbsp;
-                    <a href="data/MyCV2026.pdf">CV</a> &nbsp;/&nbsp;
-                    <!-- <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a> &nbsp;/&nbsp; -->
-                    <!-- <a href="https://twitter.com/jon_barron">Twitter</a> &nbsp;/&nbsp; -->
-                    <a href="https://github.com/Rickyeeeeee/">Github</a>
-                  </p>
-                </td>
-                <!-- <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/JonBarron.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/JonBarron.jpg" class="hoverZoomLink"></a>
-              </td> -->
-              </tr>
-            </tbody>
-          </table>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:16px;width:100%;vertical-align:middle">
-                  <h2>Research</h2>
-                  <p>
-                    I'm interested in computer vision, computer graphics, and machine learning research.
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table
-            style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-
-              <tr onmouseout="nexf_stop()" onmouseover="nexf_start()">
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='nexf_image'>
-                      <img src='images/A2TG.png' width=100%>
-                    </div>
-                    <img src='images/A2TG.png' width=100%>
-                  </div>
-                  <script type="text/javascript">
-                    function nexf_start() {
-                      document.getElementById('nexf_image').style.opacity = "1";
-                    }
-
-                    function nexf_stop() {
-                      document.getElementById('nexf_image').style.opacity = "0";
-                    }
-                    nexf_stop()
-                  </script>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <span class="papertitle">A^2TG: Adaptive Anisotropic Textured Gaussians for Efficient 3D Scene
-                    Representation</span>
-                  <br>
-                  <strong>Sheng-Chi Hsu</strong>,
-                  Ting-Yu Yen,
-                  Shih-Hsuan Hung,
-                  Hung-Kuo Chu
-                  <br>
-                  <em>ICLR 2026, conference paper</em>
-                  <br>
-                  <a href="https://github.com/Rickyeeeeee/A2TG">project page</a> /
-                  <a href="https://arxiv.org/abs/2601.09243">arXiv</a>
-                  <p></p>
-                  <p>
-                    Augmenting adaptive and anisoropic textures to 2D Gaussians for efficient 3D scene representations.
-                  </p>
-                  <span cla
-                </td>
-              </tr>
-              <tr onmouseout="nexf_stop()" onmouseover="nexf_start()">
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='nexf_image'>
-                      <img src='images/ODA-GS.png' width=100%>
-                    </div>
-                    <img src='images/ODA-GS.png' width=100%>
-                  </div>
-                  <script type="text/javascript">
-                    function nexf_start() {
-                      document.getElementById('nexf_image').style.opacity = "1";
-                    }
-
-                    function nexf_stop() {
-                      document.getElementById('nexf_image').style.opacity = "0";
-                    }
-                    nexf_stop()
-                  </script>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <span class="papertitle">ODA-GS: Occlusion-and Distortion-aware Gaussian Splatting for Indoor Scene Reconstruction</span>
-                  <br>
-                  Chai-Rong Lee,
-                  Ting-Yu Yen,
-                  Kai-Wen Hsiao,
-                  Shih-Hsuan Hung,
-                  <strong>Sheng-Chi Hsu</strong>,
-                  Min-Chun Hu,
-                  Chih-Yuan Yao,
-                  Hung-Kuo Chu
-                  <br>
-                  <em>SIGGRAPH ASIA 2024, technical communication</em>
-                  <br>
-                  <a href="https://dl.acm.org/doi/full/10.1145/3681758.3697997">paper</a>
-                  <p></p>
-                  <p>
-                    Augmenting adaptive and anisoropic textures to 2D Gaussians for efficient 3D scene representations.
-                  </p>
-                  <span cla
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-
-        </td>
-      </tr>
-  </table>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header>
+      <a class="wordmark" href="#main" aria-label="Ricky home">ricky.</a>
+      <nav aria-label="Main navigation">
+        <a href="#research">Research</a>
+        <a href="https://github.com/Rickyeeeeee/">GitHub</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="intro" aria-labelledby="name">
+        <div class="eyebrow">Computer vision &middot; Computer graphics</div>
+        <h1 id="name">Sheng-Chi Hsu (Ricky)</h1>
+        <p class="role">Research Assistant &middot; NYCU, Taiwan</p>
+        <p>I'm Ricky, a research assistant at National Yang Ming Chiao Tung University (NYCU), advised by Professor <a href="https://yulunalexliu.github.io/">Yu-Lun Liu</a>. Previously, I completed my master's at National Tsing Hua University (NTHU), advised by Professor <a href="https://cgv.cs.nthu.edu.tw/hkchu/">Hung-Kuo Chu</a>.</p>
+        <p>I'm fascinated by how pixels are generated on screen and the algorithms and mathematics behind them. Outside research, I enjoy building real-time rendering and ray-tracing engines.</p>
+        <p>I'm currently actively seeking PhD opportunities, feal free to contact me for collaboration!</p>
+        <div class="interests" aria-label="Research interests">
+          <span>3D reconstruction</span><span>Neural rendering</span><span>Diffusion and flow models</span>
+        </div>
+        <div class="contacts">
+          <a href="mailto:ricky610626@gapp.nthu.edu.tw">Email &#8599;</a>
+          <a href="data/MyCV2026.pdf">CV &#8599;</a>
+          <a href="https://github.com/Rickyeeeeee/">GitHub &#8599;</a>
+        </div>
+      </section>
+      <section id="research" aria-labelledby="research-title">
+        <div class="section-heading"><h2 id="research-title">Selected research</h2><span>2024 &mdash; 2026</span></div>
+        <article class="paper">
+          <img class="visual" src="images/A2TG.png" alt="A2TG research overview: adaptive anisotropic textured Gaussians for 3D scene representation">
+          <div>
+            <p class="venue">ICLR 2026 &middot; Conference paper</p>
+            <h3>A<sup>2</sup>TG: Adaptive Anisotropic Textured Gaussians for Efficient 3D Scene Representation</h3>
+            <p class="authors"><strong>Sheng-Chi Hsu</strong>, Ting-Yu Yen, Shih-Hsuan Hung, Hung-Kuo Chu</p>
+            <p class="abstract">Augmenting 2D Gaussians with adaptive anisotropic textures for efficient 3D scene representations.</p>
+            <div class="paper-links"><a href="https://github.com/Rickyeeeeee/A2TG">Code &#8599;</a><a href="https://arxiv.org/abs/2601.09243">arXiv &#8599;</a></div>
+          </div>
+        </article>
+        <article class="paper">
+          <img class="visual" src="images/ODA-GS.png" alt="ODA-GS research overview: Gaussian splatting for indoor scene reconstruction" loading="lazy">
+          <div>
+            <p class="venue">SIGGRAPH Asia 2024 &middot; Technical communication</p>
+            <h3>ODA-GS: Occlusion-and Distortion-aware Gaussian Splatting for Indoor Scene Reconstruction</h3>
+            <p class="authors">Chai-Rong Lee, Ting-Yu Yen, Kai-Wen Hsiao, Shih-Hsuan Hung, <strong>Sheng-Chi Hsu</strong>, Min-Chun Hu, Chih-Yuan Yao, Hung-Kuo Chu</p>
+            <p class="abstract">Occlusion- and distortion-aware Gaussian splatting for reconstructing indoor scenes.</p>
+            <div class="paper-links"><a href="https://dl.acm.org/doi/full/10.1145/3681758.3697997">Paper &#8599;</a></div>
+          </div>
+        </article>
+      </section>
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Let's connect</h2>
+        <p>Get in touch to talk about computer vision, graphics, and rendering.</p>
+        <a href="mailto:ricky610626@gapp.nthu.edu.tw">ricky610626@gapp.nthu.edu.tw &#8599;</a>
+      </section>
+    </main>
+    <footer><span>Sheng-Chi Hsu (Ricky)</span><a href="#main">Back to top &uarr;</a></footer>
+  </div>
 </body>
-
 </html>

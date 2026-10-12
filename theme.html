@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A minimal academic portfolio theme with fictional sample content.">
+  <title>Alex Chen — Portfolio theme preview</title>
+  <style>
+    :root { color-scheme: light; --bg:#faf9f6; --ink:#252a2c; --muted:#656d73; --line:#dedfda; --accent:#355e79; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:4px; }
+    a:hover { color:#193e57; text-decoration:underline; }
+    a:focus-visible, summary:focus-visible { outline:2px solid var(--accent); outline-offset:5px; border-radius:2px; }
+    .wrap { width:min(880px,calc(100% - 64px)); margin:auto; }
+    .skip { position:absolute; left:16px; top:-70px; background:white; padding:8px 16px; }
+    .skip:focus { top:12px; }
+    header { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:29px 0; border-bottom:1px solid var(--line); }
+    .wordmark { font-weight:650; letter-spacing:-.5px; color:var(--ink); text-decoration:none; }
+    nav { display:flex; gap:25px; font-size:14px; }
+    nav a { color:var(--muted); text-decoration:none; }
+    .intro { padding:70px 0 59px; max-width:730px; }
+    .eyebrow { color:var(--muted); font-size:11px; letter-spacing:1.7px; text-transform:uppercase; font-weight:650; }
+    h1 { font-size:42px; font-weight:650; line-height:1.2; letter-spacing:-1.6px; margin:13px 0 10px; }
+    .role { color:var(--muted); margin:0 0 25px; }
+    p { margin:0 0 16px; }
+    .interests { display:flex; flex-wrap:wrap; gap:8px 19px; margin:23px 0; color:var(--muted); font-size:14px; }
+    .interests span::before { content:""; display:inline-block; width:4px; height:4px; border-radius:50%; background:#899c9b; vertical-align:middle; margin-right:8px; }
+    .contacts { display:flex; flex-wrap:wrap; gap:24px; margin-top:26px; font-size:14px; font-weight:600; }
+    section { scroll-margin-top:24px; }
+    .section-heading { display:flex; align-items:baseline; justify-content:space-between; gap:20px; border-bottom:1px solid var(--line); padding-bottom:15px; }
+    h2 { font-size:23px; letter-spacing:-.6px; font-weight:600; margin:0; }
+    .section-heading span { font-size:12px; color:var(--muted); }
+    .paper { display:grid; grid-template-columns:208px minmax(0,1fr); gap:30px; padding:29px 0; border-bottom:1px solid var(--line); align-items:start; }
+    .visual { width:100%; height:auto; display:block; border-radius:5px; border:1px solid #dde2df; }
+    .venue { color:var(--accent); font-size:11px; letter-spacing:1px; font-weight:650; text-transform:uppercase; margin:0 0 7px; }
+    h3 { font-size:18px; line-height:1.45; letter-spacing:-.25px; font-weight:600; margin:0 0 10px; }
+    .authors { color:var(--muted); font-size:13px; margin-bottom:10px; }
+    .authors strong { color:var(--ink); font-weight:600; }
+    .abstract { font-size:14px; line-height:1.7; margin-bottom:12px; color:#51595f; }
+    details { font-size:13px; }
+    summary { width:fit-content; cursor:pointer; color:var(--accent); text-underline-offset:4px; }
+    summary:hover { text-decoration:underline; }
+    details p { margin:12px 0 0; color:var(--muted); }
+    #projects { margin-top:53px; }
+    .projects { display:grid; grid-template-columns:1fr 1fr; gap:32px; padding-top:26px; }
+    .project h3 { margin-top:17px; }
+    .project .visual { aspect-ratio:2/1; }
+    .tools { color:var(--muted); font-size:12px; }
+    #contact { margin-top:55px; padding:29px 0 35px; border-top:1px solid var(--line); }
+    #contact p { color:var(--muted); font-size:14px; margin:10px 0; }
+    footer { border-top:1px solid var(--line); padding:20px 0 30px; display:flex; justify-content:space-between; gap:20px; font-size:12px; color:var(--muted); }
+    footer a { color:inherit; }
+    @media(max-width:620px) {
+      .wrap { width:calc(100% - 40px); }
+      header { padding:20px 0; } nav { gap:16px; font-size:13px; }
+      .intro { padding:46px 0 40px; } h1 { font-size:36px; }
+      .paper { grid-template-columns:1fr; gap:20px; }
+      .paper .visual { max-width:360px; }
+      .projects { grid-template-columns:1fr; gap:30px; }
+      .section-heading span { font-size:11px; }
+      footer { flex-direction:column; gap:5px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header>
+      <a class="wordmark" href="#main" aria-label="Alex Chen home">ac.</a>
+      <nav aria-label="Main navigation"><a href="#research">Research</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+    </header>
+    <main id="main">
+      <section class="intro" aria-labelledby="name">
+        <div class="eyebrow">Personal website · Theme preview</div>
+        <h1 id="name">Alex Chen</h1>
+        <p class="role">Research Assistant · North Coast University, Taiwan</p>
+        <p>I study how we capture, represent, and render the visual world. At the Visual Computing Lab, I work with Professor Maya Lin on efficient 3D reconstruction and neural rendering.</p>
+        <p>Previously, I completed my master’s at Greenfield University. Outside research, I enjoy building small rendering engines and exploring the mathematics behind the pixels.</p>
+        <div class="interests" aria-label="Research interests"><span>3D reconstruction</span><span>Neural rendering</span><span>Generative models</span></div>
+        <div class="contacts"><a href="mailto:alex@example.com">Email ↗</a><a href="#sample-cv">CV ↓</a><a href="#projects">Selected code projects ↓</a></div>
+      </section>
+      <section id="research" aria-labelledby="research-title">
+        <div class="section-heading"><h2 id="research-title">Selected research</h2><span>2025 — 2026</span></div>
+        <article class="paper">
+          <svg class="visual" viewBox="0 0 300 210" role="img" aria-labelledby="scene-title">
+            <title id="scene-title">Illustrative reconstructed room with a blue chair and point samples</title>
+            <rect width="300" height="210" fill="#e9eeeb"/><path d="M35 150 150 199 270 141 152 96Z" fill="#d7dfd8"/><path d="M35 150V47l117-29v78Z" fill="#f5f5ee"/><path d="m152 18 118 39v84L152 96Z" fill="#dce5e2"/>
+            <path d="M65 135V71l52-13v65Zm116-81 56 18v44l-56-18Z" fill="#bccdc9"/>
+            <path d="m120 133 37 14 30-14-38-14Z" fill="#7897a5"/><path d="m120 133 1-48 37 11-1 51Z" fill="#597c90"/><path d="m121 143 1 29m34-24v35m30-46v28" stroke="#476779" stroke-width="5"/>
+            <g fill="#849b8e"><circle cx="51" cy="154" r="2"/><circle cx="83" cy="170" r="2"/><circle cx="101" cy="147" r="2"/><circle cx="193" cy="170" r="2"/><circle cx="218" cy="146" r="2"/><circle cx="232" cy="159" r="2"/><circle cx="165" cy="187" r="2"/></g>
+          </svg>
+          <div><p class="venue">Sample conference · 2026</p><h3>LightField: Compact Neural Representations for Everyday Scenes</h3><p class="authors"><strong>Alex Chen</strong>, Jamie Wu, Maya Lin</p><p class="abstract">A lightweight scene representation that preserves fine visual detail while making reconstruction faster and more memory-efficient.</p><details><summary>Read research overview</summary><p>This fictional project explores how local texture features can be shared across a scene. In a real portfolio, this entry would link to the paper, project page, and code.</p></details></div>
+        </article>
+        <article class="paper">
+          <svg class="visual" viewBox="0 0 300 210" role="img" aria-labelledby="depth-title">
+            <title id="depth-title">Illustrative comparison of a geometric scene and its depth representation</title>
+            <rect width="300" height="210" fill="#eef0ed"/><path d="M20 153 79 113l59 40-59 34Z" fill="#d7dfd9"/><path d="M46 137V82l35-21 33 20v56l-33 22Z" fill="#9aac9e"/><path d="m46 82 35 19 33-20-33-20Z" fill="#c1cdbb"/><path d="M81 101v58l33-22V81Z" fill="#6c887c"/>
+            <path d="M150 29v152" stroke="#cbd2ce" stroke-dasharray="3 5"/><path d="m164 153 59-40 59 40-59 34Z" fill="#d3e0e4"/><path d="M190 137V82l35-21 33 20v56l-33 22Z" fill="#7294a7"/><path d="m190 82 35 19 33-20-33-20Z" fill="#b4c9d1"/><path d="M225 101v58l33-22V81Z" fill="#43687f"/>
+          </svg>
+          <div><p class="venue">Sample workshop · 2025</p><h3>Seeing Around Corners: Geometry-Aware Scene Completion</h3><p class="authors">Robin Lee, <strong>Alex Chen</strong>, Maya Lin</p><p class="abstract">Combining geometric priors with learned appearance to reconstruct consistent indoor scenes from sparse viewpoints.</p><details><summary>Read research overview</summary><p>This fictional study considers how a model might complete partially observed spaces while respecting visible boundaries and depth cues.</p></details></div>
+        </article>
+      </section>
+      <section id="projects" aria-labelledby="projects-title">
+        <div class="section-heading"><h2 id="projects-title">Built for curiosity</h2><span>Side projects</span></div>
+        <div class="projects">
+          <article class="project">
+            <svg class="visual" viewBox="0 0 400 200" role="img" aria-labelledby="ray-title"><title id="ray-title">Ray tracing illustration with spheres on a tiled floor</title><defs><radialGradient id="sphere" cx="32%" cy="27%"><stop stop-color="#e0e9e3"/><stop offset="1" stop-color="#56716c"/></radialGradient></defs><rect width="400" height="200" fill="#e5e9e2"/><path d="M0 123h400v77H0Z" fill="#d2d9cf"/><g stroke="#bcc8bd" fill="none"><path d="M0 154h400M0 186h400M70 123 20 200M145 123l-20 77M220 123l15 77M295 123l45 77"/></g><ellipse cx="185" cy="160" rx="64" ry="13" fill="#afbbad"/><circle cx="177" cy="113" r="49" fill="url(#sphere)"/><circle cx="273" cy="139" r="26" fill="#b79772"/></svg>
+            <h3>Still / a tiny path tracer</h3><p class="abstract">A weekend renderer exploring soft shadows, global illumination, and the quiet satisfaction of a converged image.</p><p class="tools">C++ · OpenGL · Rendering</p>
+          </article>
+          <article class="project">
+            <svg class="visual" viewBox="0 0 400 200" role="img" aria-labelledby="mesh-title"><title id="mesh-title">Wireframe terrain illustration for a mesh exploration tool</title><rect width="400" height="200" fill="#e9eef0"/><g stroke="#7892a3" stroke-width="1" fill="none"><path d="m34 144 65-28 60-53 57 27 62-44 84 87-60 31-66 17-66-10-68 2Z"/><path d="m34 144 67 5 62-34 62 11 61-24 76 31M99 116l64-1-4-52m57 27 9 36 11 55m42-135 8 56 16 62M101 149l1 24m62-58 6 56M34 144l129-29 73 66m-137-65 71 55 55-45 77 38m-143-101 66 63 53-80m8 56-70-12m9 36 137 7"/></g><g fill="#466a80"><circle cx="159" cy="63" r="3"/><circle cx="278" cy="46" r="3"/><circle cx="225" cy="126" r="3"/></g></svg>
+            <h3>Mesh notes</h3><p class="abstract">An interactive sketchbook for understanding surface normals, mesh simplification, and the shape of 3D data.</p><p class="tools">TypeScript · WebGL · Geometry</p>
+          </article>
+        </div>
+      </section>
+      <section id="contact" aria-labelledby="contact-title"><h2 id="contact-title">Let’s connect</h2><p>I’m always happy to talk about visual computing and small, interesting things to build.</p><a href="mailto:alex@example.com">alex@example.com ↗</a><details id="sample-cv" style="margin-top:24px"><summary>Sample CV</summary><p>2025–present · Research Assistant, North Coast University<br>2023–2025 · M.S. in Computer Science, Greenfield University<br>Focus · 3D vision, neural rendering, and graphics systems</p></details></section>
+    </main>
+    <footer><span>Theme preview · All people and projects are fictional.</span><a href="index.html">Original website ↗</a></footer>
+  </div>
+  <script>
+    document.querySelector('a[href="#sample-cv"]').addEventListener('click', function () {
+      document.getElementById('sample-cv').open = true;
+    });
+  </script>
+</body>
+</html>
